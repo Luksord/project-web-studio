@@ -4,7 +4,7 @@
 // import eslintLogo from '@assets/eslint.svg';
 // import prettierLogo from '@assets/prettier.svg';
 // import axiosLogo from '@assets/axios.svg';
-import { Header } from '@components/Header';
+import { Header } from '@components/Header/Header';
 
 function App() {
   return (
