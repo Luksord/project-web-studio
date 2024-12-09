@@ -1,48 +1,49 @@
 import css from './Header.module.css';
+import MenuToggle from '../../assets/images/icons.svg#menu-toggle.svg';
 
 export const Header = () => {
   return (
     <header className={css.header}>
-      <div className='header-wrap container'>
-        <nav className='menu'>
-          <a href='./index.html' className='link logo'>
-            Web<span className='logo-span'>Studio</span>
+      <div className={`${css.container} ${css.headerWrap}`}>
+        <nav className={css.menu}>
+          <a href='./index.html' className={`${css.link} ${css.logo}`}>
+            Web<span className={css.logoSpan}>Studio</span>
           </a>
-          <ul className='list list-header'>
-            <li className='item-menu'>
-              <a href='./index.html' className='link menu-link studio-underline'>
+          <ul className={`${css.list} ${css.listHeader}`}>
+            <li className={css.itemMenu}>
+              <a href='./index.html' className={`${css.link} ${css.menuLink} ${css.studioUnderline}`}>
                 Studio
               </a>
             </li>
-            <li className='item-menu'>
-              <a href='./portfolio.html' className='link menu-link'>
+            <li className={css.itemMenu}>
+              <a href='./portfolio.html' className={`${css.link} ${css.menuLink}`}>
                 Portfolio
               </a>
             </li>
-            <li className='item-menu'>
-              <a href='' className='link menu-link'>
+            <li className={css.itemMenu}>
+              <a href='' className={`${css.link} ${css.menuLink}`}>
                 Contacts
               </a>
             </li>
           </ul>
         </nav>
-        <address className='address'>
-          <ul className='list address-list'>
-            <li className='item-address'>
-              <a href='mailto:info@devstudio.com' className='link address-link'>
+        <address className={css.address}>
+          <ul className={`${css.list} ${css.addressList}`}>
+            <li className={css.itemAddress}>
+              <a href='mailto:info@devstudio.com' className={`${css.link} ${css.addressLink}`}>
                 info@devstudio.com
               </a>
             </li>
-            <li className='item-address'>
-              <a href='tel:+110001111111' className='link address-link'>
+            <li className={css.itemAddress}>
+              <a href='tel:+110001111111' className={`${css.link} ${css.addressLink}`}>
                 +11 (000) 111-11-11
               </a>
             </li>
           </ul>
         </address>
-        <button className='menu-toggle js-open-menu' aria-expanded='false' aria-controls='mobile-menu'>
+        <button className={`${css.menuToggle} ${css.jsOpenMenu}`} aria-expanded='false' aria-controls='mobile-menu'>
           <svg width='32' height='22'>
-            <use href='./images/icons.svg#menu-toggle' />
+            <use href={MenuToggle} />
           </svg>
         </button>
       </div>

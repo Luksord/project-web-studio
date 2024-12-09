@@ -1,0 +1,170 @@
+.section {
+  padding: 96px 0;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 120px 0;
+  }
+}
+
+.section .list {
+  justify-content: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media screen and (min-width: 320px) and (max-width: 427px) {
+  .container {
+  }
+}
+@media screen and (min-width: 428px) {
+  .container {
+    max-width: 428px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+}
+
+.sectionOne {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 188px 0;
+  text-align: center;
+  background-color: #2e2f42;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/people-office-desktop.jpg);
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .sectionOne {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url('../images/people-office-desktop@2x.jpg');
+  }
+}
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .sectionOne {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url('../../assets/images/people-office-tablet.jpg');
+  }
+}
+@media screen and (min-width: 768px) and ((min-device-pixel-ratio: 2) or (min-resolution: 192dpi) or (min-resolution: 2dppx)) {
+  .sectionOne {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url('../../assets/images/people-office-tablet@2x.jpg');
+  }
+}
+/* Desktop */
+@media screen and (min-width: 1158px) {
+  .sectionOne {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      ('../../assets/images/people-office-desktop.jpg');
+    padding: 188px 0;
+  }
+}
+@media screen and (min-width: 1158px) and ((min-device-pixel-ratio: 2) or
+  (min-resolution: 192dpi) or
+  (min-resolution: 2dppx)) {
+  .sectionOne {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url('../../assets/images/people-office-desktop@2x.jpg');
+  }
+}
+
+/* Mobile */
+@media screen and (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .sectionOne {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url('../../assets/images/people-office-mobile@2x.jpg');
+  }
+}
+/* Tablet */
+@media screen and (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .sectionOne {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url('../../assets/images/people-office-tablet@2x.jpg');
+  }
+}
+/* Desktop */
+@media screen and (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .sectionOne {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url('../../assets/images/people-office-desktop@2x.jpg');
+  }
+}
+
+.primaryTitle {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 72px;
+  max-width: 330px;
+}
+@media screen and (min-width: 768px) {
+  .primaryTitle {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 500px;
+    margin-bottom: 36px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .primaryTitle {
+    margin-bottom: 48px;
+  }
+}
+
+.buttonOrderService {
+  /* Button Text */
+  color: var(--white);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  /* Button */
+  background: var(--iris);
+  cursor: pointer;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  padding: 16px 32px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.buttonOrderService:hover,
+.buttonOrderService:focus,
+.buttonOrderService:active {
+  background-color: var(--ocean);
+}

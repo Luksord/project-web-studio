@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .list {
   list-style: none;
   display: flex;
@@ -23,7 +18,7 @@
     0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.header-wrap {
+.headerWrap {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -51,22 +46,22 @@
   display: block;
 }
 
-.logo-span {
+.logoSpan {
   color: #2e2f42;
 }
 
-.list-header {
+.listHeader {
   gap: 40px;
 }
 
 @media (min-width: 768px) {
-  .item-menu {
+  .itemMenu {
     font-size: 16px;
     line-height: 1.5;
   }
 }
 
-.menu-link {
+.menuLink {
   color: #2e2f42;
   font-size: 16px;
   font-weight: 500;
@@ -81,14 +76,14 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.studio-underline,
-.portfolio-underline {
+.studioUnderline,
+.portfolioUnderline {
   position: relative;
   color: #404bbf;
 }
 
-.studio-underline::after,
-.portfolio-underline::after {
+.studioUnderline::after,
+.portfolioUnderline::after {
   content: '';
   position: absolute;
   left: 0;
@@ -119,16 +114,16 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
-  .item-address {
+  .itemAddress {
     display: flex;
   }
 }
 
-.list.address-list {
+.list.addressLink {
   gap: 40px;
 }
 @media screen and (min-width: 768px) {
-  .list.address-list {
+  .list.addressLink {
     display: block;
     gap: 12px;
     font-size: 12px;
@@ -138,7 +133,7 @@
   }
 }
 @media screen and (min-width: 1158px) {
-  .list.address-list {
+  .list.addressLink {
     display: flex;
     gap: 40px;
     font-size: 16px;
@@ -146,7 +141,7 @@
   }
 }
 
-.address-link {
+.addressLink {
   color: #434455;
   display: flex;
   font-style: normal;
@@ -155,7 +150,7 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 1158px) {
-  .address-link {
+  .addressLink {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -163,23 +158,23 @@
   }
 }
 
-.social-link:hover,
-.social-link:focus,
-.social-link:active,
-.menu-link:hover,
-.menu-link:focus,
-.menu-link:active,
-.address-link:hover,
-.address-link:focus,
-.address-link:active {
+.socialLink:hover,
+.socialLink:focus,
+.socialLink:active,
+.menuLink:hover,
+.menuLink:focus,
+.menuLink:active,
+.addressLink:hover,
+.addressLink:focus,
+.addressLink:active {
   color: #404bbf;
 }
 
 @media screen and (max-width: 767px) {
-  .list.list-header {
+  .list.listHeader {
     display: none;
   }
-  .list.address-list {
+  .list.addressList {
     display: none;
   }
 }
