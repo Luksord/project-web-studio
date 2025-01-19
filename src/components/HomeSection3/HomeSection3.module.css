@@ -1,14 +1,15 @@
 .section {
-  padding: 96px 0;
+  padding-bottom: 96px;
 }
 @media screen and (min-width: 768px) {
   .section {
-    padding: 120px 0;
+    padding-bottom: 120px;
   }
 }
-
-.section .list {
-  justify-content: center;
+@media screen and (max-width: 1199px) {
+  .section {
+    display: none;
+  }
 }
 
 .container {
@@ -35,38 +36,21 @@
   }
 }
 
-@media (max-width: 1199px) {
-  .section.sectionThree {
-    display: none;
-  }
-}
-
-.sectionThree {
-  padding-top: 0;
-}
-
 .list {
-  list-style: none;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   gap: 24px;
   margin: 0;
   padding-left: 0;
 }
 
-.link {
-  text-decoration: none;
-}
-.secondaryTitle {
-  color: #2e2f42;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
+.header {
   margin-bottom: 72px;
   text-transform: capitalize;
   text-align: center;
 }
 
-.sectionThreeLink {
+.listItem {
   width: calc((100% - 48px) / 3);
 }

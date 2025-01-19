@@ -8,17 +8,17 @@ import img3x2 from '../../assets/images/img3@2x.jpg';
 
 export const HomeSection3 = () => {
   return (
-    <section className={`${css.section} ${css.sectionThree}`}>
+    <section className={css.section}>
       <div className={css.container}>
-        <h2 className={css.secondaryTitle}>What are we doing</h2>
-        <ul className={`${css.list} ${css.sectionThreeList}`}>
-          <li className={css.sectionThreeLink}>
+        <h2 className={css.header}>What are we doing</h2>
+        <ul className={css.list}>
+          <li className={css.listItem}>
             <img src={img1} srcSet={`${img1} 1x, ${img1x2} 2x`} alt='Computer' width='360' height='300' />
           </li>
-          <li className={css.sectionThreeLink}>
+          <li className={css.listItem}>
             <img src={img2} srcSet={`${img2} 1x, ${img2x2} 2x`} alt='Phone App' width='360' height='300' />
           </li>
-          <li className={css.sectionThreeLink}>
+          <li className={css.listItem}>
             <img src={img3} srcSet={`${img3} 1x, ${img3x2} 2x`} alt='Phone on hand' width='360' height='300' />
           </li>
         </ul>

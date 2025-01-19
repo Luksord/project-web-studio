@@ -12,184 +12,87 @@ import TwitterIcon from '../../assets/images/icons.svg#icon-social-twitter.svg';
 import FacebookIcon from '../../assets/images/icons.svg#icon-social-facebook.svg';
 import LinkedinIcon from '../../assets/images/icons.svg#icon-social-linkedin.svg';
 
+const teamMembers = [
+  {
+    img: img4,
+    img2x: img4x2,
+    alt: 'man with dark hair and facial hair wearing a blue shirt',
+    name: 'Mark Guerrero',
+    role: 'Product Designer',
+    socialLinks: [
+      { href: 'https://instagram.com/markguerrero', icon: InstagramIcon, alt: 'Instagram' },
+      { href: 'https://twitter.com/markguerrero', icon: TwitterIcon, alt: 'Twitter' },
+      { href: 'https://facebook.com/markguerrero', icon: FacebookIcon, alt: 'Facebook' },
+      { href: 'https://linkedin.com/in/markguerrero', icon: LinkedinIcon, alt: 'LinkedIn' },
+    ],
+  },
+  {
+    img: img5,
+    img2x: img5x2,
+    alt: 'smiling man with brown hair wearing a blue shirt',
+    name: 'Tom Ford',
+    role: 'Frontend Developer',
+    socialLinks: [
+      { href: 'https://instagram.com/tomford', icon: InstagramIcon, alt: 'Instagram' },
+      { href: 'https://twitter.com/tomford', icon: TwitterIcon, alt: 'Twitter' },
+      { href: 'https://facebook.com/tomford', icon: FacebookIcon, alt: 'Facebook' },
+      { href: 'https://linkedin.com/in/tomford', icon: LinkedinIcon, alt: 'LinkedIn' },
+    ],
+  },
+  {
+    img: img6,
+    img2x: img6x2,
+    alt: 'woman with dark hair wearing a pink pullover',
+    name: 'Camila Garcia',
+    role: 'Marketing',
+    socialLinks: [
+      { href: 'https://instagram.com/camilagarcia', icon: InstagramIcon, alt: 'Instagram' },
+      { href: 'https://twitter.com/camilagarcia', icon: TwitterIcon, alt: 'Twitter' },
+      { href: 'https://facebook.com/camilagarcia', icon: FacebookIcon, alt: 'Facebook' },
+      { href: 'https://linkedin.com/in/camilagarcia', icon: LinkedinIcon, alt: 'LinkedIn' },
+    ],
+  },
+  {
+    img: img7,
+    img2x: img7x2,
+    alt: 'smiling man with dark hair wearing a gray t-shirt',
+    name: 'Daniel Wilson',
+    role: 'UI Designer',
+    socialLinks: [
+      { href: 'https://instagram.com/danielwilson', icon: InstagramIcon, alt: 'Instagram' },
+      { href: 'https://twitter.com/danielwilson', icon: TwitterIcon, alt: 'Twitter' },
+      { href: 'https://facebook.com/danielwilson', icon: FacebookIcon, alt: 'Facebook' },
+      { href: 'https://linkedin.com/in/danielwilson', icon: LinkedinIcon, alt: 'LinkedIn' },
+    ],
+  },
+];
+
 export const HomeSection4 = () => {
   return (
-    <section className={`${css.section} ${css.sectionFour}`}>
+    <section className={css.section}>
       <div className={css.container}>
-        <h2 className={css.secondaryTitle}>Our Team</h2>
-        <ul className={`${css.list} ${css.sectionFourList}`}>
-          <li className={css.sectionFourItem}>
-            <img
-              src={img4}
-              srcSet={`${img4} 1x, ${img4x2} 2x`}
-              alt='man with dark hair and facial hair wearing a blue shirt'
-              width='264'
-              height='260'
-            />
-            <div className={css.teamMember}>
-              <h3 className={css.tertiaryTitle}>Mark Guerrero</h3>
-              <p className={css.paragraph}>Product Designer</p>
-              <ul className={`${css.list} ${css.socialList}`}>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={InstagramIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={TwitterIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={FacebookIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={LinkedinIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li className={css.sectionFourItem}>
-            <img
-              src={img5}
-              srcSet={`${img5} 1x, ${img5x2} 2x`}
-              alt='smiling man with brown hair wearing a blue shirt'
-              width='264'
-              height='260'
-            />
-            <div className={css.teamMember}>
-              <h3 className={css.tertiaryTitle}>Tom Ford</h3>
-              <p className={css.paragraph}>Frontend Developer</p>
-              <ul className={`${css.list} ${css.socialList}`}>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={InstagramIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={TwitterIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={FacebookIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={LinkedinIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li className={css.sectionFourItem}>
-            <img
-              src={img6}
-              srcSet={`${img6} 1x, ${img6x2} 2x`}
-              alt='woman with dark hair wearing a pink pullover'
-              width='264'
-              height='260'
-            />
-            <div className={css.teamMember}>
-              <h3 className={css.tertiaryTitle}>Camila Garcia</h3>
-              <p className={css.paragraph}>Marketing</p>
-              <ul className={`${css.list} ${css.socialList}`}>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={InstagramIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={TwitterIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={FacebookIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={LinkedinIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li className={css.sectionFourItem}>
-            <img
-              src={img7}
-              srcSet={`${img7} 1x, ${img7x2} 2x`}
-              alt='smiling man with dark hair wearing a gray t-shirt'
-              width='264'
-              height='260'
-            />
-            <div className={css.teamMember}>
-              <h3 className={css.tertiaryTitle}>Daniel Wilson</h3>
-              <p className={css.paragraph}>UI Designer</p>
-              <ul className={`${css.list} ${css.socialList}`}>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={InstagramIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={TwitterIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={FacebookIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-                <li className={`${css.link} ${css.socialMediaContainer}`}>
-                  <a href='' className={css.socialLink}>
-                    <svg className={css.socialIcon} width='16' height='16'>
-                      <use href={LinkedinIcon}></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
+        <h2 className={css.header}>Our Team</h2>
+        <ul className={css.teamList}>
+          {teamMembers.map(({ img, img2x, alt, name, role, socialLinks }, index) => (
+            <li key={index} className={css.employeeCard}>
+              <img src={img} srcSet={`${img} 1x, ${img2x} 2x`} alt={alt} width='264' height='260' />
+              <div className={css.employeeInfo}>
+                <h3 className={css.name}>{name}</h3>
+                <p className={css.role}>{role}</p>
+                <ul className={css.socialLinks}>
+                  {socialLinks.map(({ href, icon, alt }, i) => (
+                    <li key={i} className={css.linkContainer}>
+                      <a href={href} className={css.socialLink} aria-label={alt}>
+                        <svg className={css.socialIcon} width='16' height='16'>
+                          <use href={icon}></use>
+                        </svg>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
     </section>

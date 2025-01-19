@@ -4,56 +4,46 @@ import iconClock from '../../assets/images/icons.svg#icon-clock.svg';
 import iconDiagram from '../../assets/images/icons.svg#icon-diagram.svg';
 import iconAstronaut from '../../assets/images/icons.svg#icon-astronaut.svg';
 
+const items = [
+  {
+    icon: iconAntenna,
+    title: 'Strategy',
+    text: 'Our goal is to identify the business problem to walk away with the perfect and creative solution.',
+  },
+  {
+    icon: iconClock,
+    title: 'Punctuality',
+    text: "Bring the key message to the brand's audience for the best price within the shortest possible time.",
+  },
+  {
+    icon: iconDiagram,
+    title: 'Diligence',
+    text: 'Research and confirm brands that present the strongest digital growth opportunities and minimize risk.',
+  },
+  {
+    icon: iconAstronaut,
+    title: 'Technologies',
+    text: 'Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.',
+  },
+];
+
 export const HomeSection2 = () => {
   return (
-    <section className={`${css.section} ${css.sectionTwo}`}>
+    <section className={css.section}>
       <div className={css.container}>
         <h2 className={css.visuallyHidden}>Our Values</h2>
-        <ul className={`${css.list} ${css.sectionTwoList}`}>
-          <li className={css.sectionTwoItem}>
-            <div className={css.sectionTwoContainer}>
-              <svg width='64' height='64'>
-                <use href={iconAntenna}></use>
-              </svg>
-            </div>
-            <h3 className={css.tertiaryTitle}>Strategy</h3>
-            <p className={css.paragraph}>
-              Our goal is to identify the business problem to walk away with the perfect and creative solution.
-            </p>
-          </li>
-          <li className={css.sectionTwoItem}>
-            <div className={css.sectionTwoContainer}>
-              <svg width='64' height='64'>
-                <use href={iconClock}></use>
-              </svg>
-            </div>
-            <h3 className={css.tertiaryTitle}>Punctuality</h3>
-            <p className={css.paragraph}>
-              Bring the key message to the brand's audience for the best price within the shortest possible time.
-            </p>
-          </li>
-          <li className={css.sectionTwoItem}>
-            <div className={css.sectionTwoContainer}>
-              <svg width='64' height='64'>
-                <use href={iconDiagram}></use>
-              </svg>
-            </div>
-            <h3 className={css.tertiaryTitle}>Diligence</h3>
-            <p className={css.paragraph}>
-              Research and confirm brands that present the strongest digital growth opportunities and minimize risk.
-            </p>
-          </li>
-          <li className={css.sectionTwoItem}>
-            <div className={css.sectionTwoContainer}>
-              <svg width='64' height='64'>
-                <use href={iconAstronaut}></use>
-              </svg>
-            </div>
-            <h3 className={css.tertiaryTitle}>Technologies</h3>
-            <p className={css.paragraph}>
-              Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.
-            </p>
-          </li>
+        <ul className={css.list}>
+          {items.map(({ icon, title, text }, index) => (
+            <li key={index} className={css.listItem}>
+              <div className={css.iconContainer}>
+                <svg width='64' height='64'>
+                  <use href={icon}></use>
+                </svg>
+              </div>
+              <h3 className={css.title}>{title}</h3>
+              <p className={css.text}>{text}</p>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
