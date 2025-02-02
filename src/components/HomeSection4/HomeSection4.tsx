@@ -12,7 +12,22 @@ import TwitterIcon from '../../assets/images/icons.svg#icon-social-twitter.svg';
 import FacebookIcon from '../../assets/images/icons.svg#icon-social-facebook.svg';
 import LinkedinIcon from '../../assets/images/icons.svg#icon-social-linkedin.svg';
 
-const teamMembers = [
+export interface SocialLinkProps {
+  href: string;
+  icon: string;
+  alt: string;
+}
+
+interface teamMemberProps {
+  img: string;
+  img2x: string;
+  alt: string;
+  name: string;
+  role: string;
+  socialLinks: SocialLinkProps[];
+}
+
+const teamMembers: teamMemberProps[] = [
   {
     img: img4,
     img2x: img4x2,
@@ -67,31 +82,39 @@ const teamMembers = [
   },
 ];
 
+const SocialLink = ({ href, icon, alt }: SocialLinkProps) => (
+  <li className={css.linkContainer}>
+    <a href={href} className={css.socialLink} aria-label={alt}>
+      <svg className={css.socialIcon}>
+        <use href={icon}></use>
+      </svg>
+    </a>
+  </li>
+);
+
+const TeamMember = ({ img, img2x, alt, name, role, socialLinks }: teamMemberProps) => (
+  <li className={css.employeeCard}>
+    <img src={img} srcSet={`${img} 1x, ${img2x} 2x`} alt={alt} width='264' height='260' />
+    <div className={css.employeeInfo}>
+      <h3 className={css.name}>{name}</h3>
+      <p className={css.role}>{role}</p>
+      <ul className={css.socialLinks}>
+        {socialLinks.map((link, i) => (
+          <SocialLink key={i} {...link} />
+        ))}
+      </ul>
+    </div>
+  </li>
+);
+
 export const HomeSection4 = () => {
   return (
     <section className={css.section}>
       <div className={css.container}>
         <h2 className={css.header}>Our Team</h2>
         <ul className={css.teamList}>
-          {teamMembers.map(({ img, img2x, alt, name, role, socialLinks }, index) => (
-            <li key={index} className={css.employeeCard}>
-              <img src={img} srcSet={`${img} 1x, ${img2x} 2x`} alt={alt} width='264' height='260' />
-              <div className={css.employeeInfo}>
-                <h3 className={css.name}>{name}</h3>
-                <p className={css.role}>{role}</p>
-                <ul className={css.socialLinks}>
-                  {socialLinks.map(({ href, icon, alt }, i) => (
-                    <li key={i} className={css.linkContainer}>
-                      <a href={href} className={css.socialLink} aria-label={alt}>
-                        <svg className={css.socialIcon} width='16' height='16'>
-                          <use href={icon}></use>
-                        </svg>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
+          {teamMembers.map((member, index) => (
+            <TeamMember key={index} {...member} />
           ))}
         </ul>
       </div>

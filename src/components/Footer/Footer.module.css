@@ -132,6 +132,11 @@
   background-color: var(--green);
 }
 
+.socialIcon {
+  width: 24px;
+  height: 24px;
+}
+
 .subscribeContainer {
   display: block;
 }
@@ -158,7 +163,6 @@
 @media screen and (min-width: 1158px) {
   .form {
     flex-wrap: nowrap;
-    gap: 24px;
   }
 }
 

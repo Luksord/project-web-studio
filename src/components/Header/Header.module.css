@@ -1,10 +1,18 @@
+.header {
+  border-bottom: 1px solid var(--cornflower);
+  box-shadow:
+    0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
 .container {
   margin: 0 auto;
-  padding: 0 16px;
-}
-@media screen and (min-width: 320px) and (max-width: 427px) {
-  .container {
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 72px;
 }
 @media screen and (min-width: 428px) {
   .container {
@@ -22,34 +30,6 @@
   }
 }
 
-.list {
-  list-style: none;
-  display: flex;
-  gap: 24px;
-  margin: 0;
-  padding-left: 0;
-}
-
-.link {
-  text-decoration: none;
-}
-
-.header {
-  border-bottom: 1px solid var(--cornflower);
-  box-shadow:
-    0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
-.headerWrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 72px;
-}
-
 .menu {
   display: flex;
   align-items: center;
@@ -58,7 +38,7 @@
 }
 
 .logo {
-  color: #4d5ae5;
+  color: var(--iris);
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -71,22 +51,26 @@
 }
 
 .logoSpan {
-  color: #2e2f42;
+  color: var(--navy-blue);
 }
 
-.listHeader {
-  gap: 40px;
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding-left: 0;
 }
 
 @media (min-width: 768px) {
-  .itemMenu {
+  .navItem {
     font-size: 16px;
     line-height: 1.5;
   }
 }
 
-.menuLink {
-  color: #2e2f42;
+.navLink {
+  color: var(--navy-blue);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -100,13 +84,13 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.studioUnderline,
+.homeUnderline,
 .portfolioUnderline {
   position: relative;
-  color: #404bbf;
+  color: var(--ocean);
 }
 
-.studioUnderline::after,
+.homeUnderline::after,
 .portfolioUnderline::after {
   content: '';
   position: absolute;
@@ -115,7 +99,7 @@
   bottom: -1px;
   width: 100%;
   height: 4px;
-  background-color: #404bbf;
+  background-color: var(--ocean);
   border-radius: 2px;
 }
 
@@ -137,19 +121,22 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1157px) {
-  .itemAddress {
-    display: flex;
-  }
+.addressList {
+  display: flex;
+  gap: 24px;
 }
 
-.list.addressLink {
-  gap: 40px;
+.addressLink {
+  color: var(--slate);
+  display: flex;
+  font-style: normal;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
-  .list.addressLink {
+  .addressLink {
     display: block;
-    gap: 12px;
     font-size: 12px;
     font-weight: 400;
     line-height: 1.5;
@@ -157,27 +144,9 @@
   }
 }
 @media screen and (min-width: 1158px) {
-  .list.addressLink {
-    display: flex;
-    gap: 40px;
-    font-size: 16px;
-    letter-spacing: 0.02em;
-  }
-}
-
-.addressLink {
-  color: #434455;
-  display: flex;
-  font-style: normal;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-@media screen and (min-width: 1158px) {
   .addressLink {
-    font-weight: 400;
+    display: flex;
     font-size: 16px;
-    line-height: 1.5;
     letter-spacing: 0.02em;
   }
 }
@@ -191,14 +160,14 @@
 .addressLink:hover,
 .addressLink:focus,
 .addressLink:active {
-  color: #404bbf;
+  color: var(--ocean);
 }
 
 @media screen and (max-width: 767px) {
-  .list.listHeader {
+  .navItem {
     display: none;
   }
-  .list.addressList {
+  .addressList {
     display: none;
   }
 }
@@ -208,7 +177,7 @@ Mobile Menu .menuToggle {
   top: 24px;
   right: 24px;
 }
-.headerWrap .menuToggle {
+.menuToggle {
   background: none;
   border: none;
   cursor: pointer;
@@ -224,7 +193,9 @@ Mobile Menu .menuToggle {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.iconMenu {
+.menuIcon {
+  width: 32px;
+  height: 32px;
 }
 
 .menuContainer {
@@ -268,7 +239,7 @@ Mobile Menu .menuToggle {
 }
 .mobileMenu .link:hover,
 .mobileMenu .link:focus {
-  color: #404bbf;
+  color: var(--ocean);
 }
 
 .mobileAddress {
@@ -281,7 +252,7 @@ Mobile Menu .menuToggle {
 
 .mobileAddressTel {
   display: flex;
-  color: #4d5ae5;
+  color: var(--iris);
   font-family: inherit;
   font-size: 36px;
   font-style: normal;
@@ -295,12 +266,12 @@ Mobile Menu .menuToggle {
 }
 .mobileAddressTel:hover,
 .mobileAddressTel:focus {
-  color: #404bbf;
+  color: var(--ocean);
 }
 
 .mobileAddressMail {
   display: flex;
-  color: #434455;
+  color: var(--slate);
   font-family: inherit;
   font-size: 20px;
   font-style: normal;
@@ -313,7 +284,7 @@ Mobile Menu .menuToggle {
 }
 .mobileAddressMail:hover,
 .mobileAddressMail:focus {
-  color: #404bbf;
+  color: var(--ocean);
 }
 
 .moblieSocialLinks {

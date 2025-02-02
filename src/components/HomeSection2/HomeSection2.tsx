@@ -4,7 +4,13 @@ import iconClock from '../../assets/images/icons.svg#icon-clock.svg';
 import iconDiagram from '../../assets/images/icons.svg#icon-diagram.svg';
 import iconAstronaut from '../../assets/images/icons.svg#icon-astronaut.svg';
 
-const items = [
+export interface itemProps {
+  icon: string;
+  title: string;
+  text: string;
+}
+
+const items: itemProps[] = [
   {
     icon: iconAntenna,
     title: 'Strategy',

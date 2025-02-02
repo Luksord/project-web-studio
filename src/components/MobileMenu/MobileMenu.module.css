@@ -1,0 +1,109 @@
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 80px 60px 40px 40px;
+  background-color: var(--white);
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  overflow: auto;
+}
+
+.menuContainer.is-open {
+  transform: translateX(0);
+}
+
+.menuToggle {
+}
+
+.modalCloseBtn {
+}
+
+.closeIcon {
+}
+
+.mobileMenu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 284px;
+}
+
+.mobileMenu {
+  display: block;
+  padding: 10px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: capitalize;
+  color: #2e2f42;
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobileMenu:hover,
+.mobileMenu:focus {
+  color: var(--ocean);
+}
+
+.navLink {
+}
+
+.mobileAddress {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 48px;
+  display: block;
+}
+
+.mobileAddressTel {
+  display: flex;
+  color: var(--iris);
+  font-family: inherit;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.72px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 40px;
+}
+.mobileAddressTel:hover,
+.mobileAddressTel:focus {
+  color: var(--ocean);
+}
+
+.mobileAddressMail {
+  display: flex;
+  color: var(--slate);
+  font-family: inherit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobileAddressMail:hover,
+.mobileAddressMail:focus {
+  color: var(--ocean);
+}
+
+.moblieSocialLinks {
+  list-style: none;
+  display: flex;
+  gap: 56px;
+}
