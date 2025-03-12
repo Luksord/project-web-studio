@@ -87,13 +87,15 @@
 // };
 
 import { Dispatch, SetStateAction } from 'react';
+import { Link } from 'react-router-dom';
 import InstagramIcon from '../../assets/images/icons.svg#icon-social-instagram.svg';
 import TwitterIcon from '../../assets/images/icons.svg#icon-social-twitter.svg';
 import FacebookIcon from '../../assets/images/icons.svg#icon-social-facebook.svg';
 import LinkedinIcon from '../../assets/images/icons.svg#icon-social-linkedin.svg';
 import CloseIcon from '../../assets/images/icons.svg#icon-close.svg';
 import { SocialLinkProps } from '../HomeSection4/HomeSection4';
-import css from './MobileMenu.module.css';
+import css from '../Header/Header.module.css';
+import { menu } from '../Menu/Menu';
 
 interface MobileMenuProps {
   setIsMobileMenuOpen: Dispatch<SetStateAction<boolean>>;
@@ -109,7 +111,17 @@ export const MobileMenu = ({ setIsMobileMenuOpen }: MobileMenuProps) => {
           </svg>
         </button>
         <nav>
-          <ul className='mobile-menu'>
+          {menu.map(({ pageName, pageLink }, index) => (
+            <li key={index} className={css.navItem}>
+              <Link
+                to={pageLink}
+                className={`${css.navLink} ${location.pathname.startsWith(pageLink) ? css.underline : ''}`}
+              >
+                {pageName}
+              </Link>
+            </li>
+          ))}
+          {/* <ul className='mobile-menu'>
             <li>
               <a href='/' className='link'>
                 Studio
@@ -125,7 +137,7 @@ export const MobileMenu = ({ setIsMobileMenuOpen }: MobileMenuProps) => {
                 Contacts
               </a>
             </li>
-          </ul>
+          </ul> */}
         </nav>
         <address>
           <ul className='mobile-address'>

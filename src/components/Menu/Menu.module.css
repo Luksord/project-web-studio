@@ -1,0 +1,46 @@
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .navItem {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.navLink {
+  color: var(--navy-blue);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  position: relative;
+  display: inline-block;
+  flex-direction: column;
+  padding: 24px 0;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.underline {
+  position: relative;
+  color: var(--ocean);
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 2px;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--ocean);
+  border-radius: 2px;
+}
