@@ -1,15 +1,19 @@
 import { Link, useLocation } from 'react-router-dom';
 import css from './Menu.module.css';
 
-interface menuProps {
+interface MenuProps {
   pageName: string;
   pageLink: string;
 }
 
-export const menu: menuProps[] = [
+export const menu: MenuProps[] = [
   { pageName: 'Studio', pageLink: '/' },
   { pageName: 'Portfolio', pageLink: '/portfolio' },
-  { pageName: 'Contacts', pageLink: '/contacts' },
+  {
+    pageName: 'Learn More',
+    pageLink: '/learn-more',
+  },
+  { pageName: 'Contact Us', pageLink: '/contact-us' },
 ];
 
 export const Menu = () => {
@@ -21,7 +25,7 @@ export const Menu = () => {
         <li key={pageLink} className={css.navItem}>
           <Link
             to={pageLink}
-            className={`${css.navLink} ${location.pathname.startsWith(pageLink) ? css.underline : ''}`}
+            className={`${css.navLink} ${location.pathname.startsWith(pageLink) ? css.homeUnderline : ''}`}
           >
             {pageName}
           </Link>

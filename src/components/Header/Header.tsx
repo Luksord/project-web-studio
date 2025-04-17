@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import MenuToggle from '../../assets/images/icons.svg#menu-toggle.svg';
 import { menu } from '../Menu/Menu';
 import css from './Header.module.css';
+import { useTheme } from '../../contexts/ThemeContext';
+import { AiFillSun, AiFillMoon } from 'react-icons/ai';
 
 interface HeaderProps {
   setIsMobileMenuOpen: Dispatch<SetStateAction<boolean>>;
@@ -10,6 +12,7 @@ interface HeaderProps {
 
 export const Header = ({ setIsMobileMenuOpen }: HeaderProps) => {
   const location = useLocation();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header className={css.header}>
@@ -31,7 +34,10 @@ export const Header = ({ setIsMobileMenuOpen }: HeaderProps) => {
             ))}
           </ul>
         </nav>
-        <address className={css.address}>
+        <div className={css.theme}>
+          <button onClick={toggleTheme}>{theme === 'dark' ? <AiFillSun size={24} /> : <AiFillMoon size={24} />}</button>
+        </div>
+        {/* <address className={css.address}>
           <ul className={css.addressList}>
             <li className={css.addressItem}>
               <a href='mailto:info@devstudio.com' className={css.addressLink}>
@@ -44,7 +50,7 @@ export const Header = ({ setIsMobileMenuOpen }: HeaderProps) => {
               </a>
             </li>
           </ul>
-        </address>
+        </address> */}
         <button
           className={css.menuToggle}
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}

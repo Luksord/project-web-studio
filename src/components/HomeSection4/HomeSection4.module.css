@@ -98,7 +98,7 @@
   justify-content: center;
   height: 40px;
   width: 40px;
-  background-color: #4d5ae5;
+  background-color: var(--iris);
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -110,11 +110,11 @@
 .socialLink:hover,
 .socialLink:focus,
 .socialLink:active {
-  background-color: #404bbf;
+  background-color: var(--ocean);
 }
 
 .socialIcon {
   width: 16px;
   height: 16px;
-  fill: #f4f4fd;
+  fill: var(--cloud);
 }

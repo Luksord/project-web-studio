@@ -44,3 +44,43 @@
   background-color: var(--ocean);
   border-radius: 2px;
 }
+
+.hasDropdown {
+  position: relative;
+}
+
+.subMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  min-width: 150px;
+  z-index: 10;
+  display: none;
+}
+
+.hasDropdown:hover .subMenu {
+  display: block;
+}
+
+.subMenuItem {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.subMenuItem:last-child {
+  border-bottom: none;
+}
+
+.subMenuLink {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 8px 12px;
+}
+
+.subMenuLink:hover {
+  background-color: #f0f0f0;
+}
