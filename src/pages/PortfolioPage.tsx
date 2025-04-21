@@ -11,7 +11,7 @@ export const PortfolioPage = () => {
 
   return (
     <>
-      {/* <Header setIsMobileMenuOpen={setIsMobileMenuOpen} /> */}
+      <Header setIsMobileMenuOpen={setIsMobileMenuOpen} />
       {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
       {isMobileMenuOpen && <MobileMenu setIsMobileMenuOpen={setIsMobileMenuOpen} />}
       <Portfolio />
