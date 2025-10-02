@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Header } from '@components/Header/Header';
 import { Modal } from '@components/Modal/Modal';
 import { MobileMenu } from '@components/MobileMenu/MobileMenu';
+import { Contact } from '@components/Contact/Contact';
 import { Footer } from '@components/Footer/Footer';
 
 export const ContactUsPage = () => {
@@ -13,6 +14,7 @@ export const ContactUsPage = () => {
       <Header setIsMobileMenuOpen={setIsMobileMenuOpen} />
       {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} />}
       {isMobileMenuOpen && <MobileMenu setIsMobileMenuOpen={setIsMobileMenuOpen} />}
+      <Contact />
       <Footer />
     </>
   );

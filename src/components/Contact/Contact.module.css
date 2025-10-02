@@ -1,0 +1,54 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  min-height: 500px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+}
+@media all and (min-width: 768px) {
+  .address {
+    margin-left: auto;
+    max-width: 119px;
+  }
+}
+@media all and (min-width: 1158px) {
+  .address {
+    max-width: 350px;
+  }
+}
+
+.addressList {
+  display: flex;
+  gap: 24px;
+}
+
+.addressLink {
+  color: var(--slate);
+  display: flex;
+  font-style: normal;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .addressLink {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .addressLink {
+    display: flex;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+}

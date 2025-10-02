@@ -118,16 +118,6 @@ export const Portfolio = () => {
             </li>
           ))}
         </ul>
-        {/* <ul className={css.buttonsList}>
-          {filterButtons.map((label) => (
-            <li key={label}>
-              <button type='button' className={css.button}>
-                {label}
-              </button>
-            </li>
-          ))}
-        </ul> */}
-
         <ul className={css.portfolioList}>
           {filteredItems.map(({ img, description, title, category, href }, index) => (
             <li key={index} className={css.listItem}>
@@ -144,22 +134,6 @@ export const Portfolio = () => {
             </li>
           ))}
         </ul>
-        {/* <ul className={css.portfolioList}>
-          {portfolioItems.map(({ img, description, title, category, href }, index) => (
-            <li key={index} className={css.listItem}>
-              <a href={href} className={css.link}>
-                <div className={css.imageContainer}>
-                  <img src={img} alt={title} className={css.image} loading='lazy' />
-                  <p className={css.overlay}>{description}</p>
-                </div>
-                <div className={css.infoContainer}>
-                  <h2 className={css.title}>{title}</h2>
-                  <p className={css.text}>{category}</p>
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul> */}
       </div>
     </section>
   );

@@ -1,42 +1,3 @@
-.navList {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  gap: 40px;
-}
-
-.navLink {
-  color: var(--ocean);
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: 0.02em;
-  position: relative;
-  display: inline-block;
-  flex-direction: column;
-  padding: 24px 0;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.underline {
-  position: relative;
-  color: var(--ocean);
-}
-
-.underline::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 2px;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  background-color: var(--ocean);
-  border-radius: 2px;
-}
-
 .menuContainer {
   display: flex;
   flex-direction: column;
@@ -54,54 +15,77 @@
   overflow: auto;
 }
 
-.menuContainer.is-open {
+.menuContainer.isOpen {
   transform: translateX(0);
 }
 
-.menuToggle {
-}
-
 .modalCloseBtn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--cornflower);
+  cursor: pointer;
+  border-radius: 50%;
 }
 
 .closeIcon {
+  width: 8px;
+  height: 8px;
 }
 
-.mobileMenu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  margin-bottom: 284px;
+.navList {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 30px;
+  margin-bottom: 100px;
 }
 
-.mobileMenu {
-  display: block;
-  padding: 10px;
+.navLink {
+  color: var(--ocean);
   font-size: 36px;
   font-weight: 700;
-  line-height: 1.1;
-  text-transform: capitalize;
-  color: #2e2f42;
-  text-decoration: none;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  position: relative;
+  display: inline-block;
+  flex-direction: column;
+  padding-bottom: 10px;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mobileMenu:hover,
-.mobileMenu:focus {
+.underline {
+  position: relative;
   color: var(--ocean);
 }
 
-.navLink {
+.underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 2px;
+  bottom: -1px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--ocean);
+  border-radius: 2px;
 }
 
-.mobileAddress {
+.mobileAddressList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 0;
   margin: 0;
   list-style: none;
-  margin-bottom: 48px;
-  display: block;
+  margin-bottom: 40px;
 }
 
 .mobileAddressTel {
@@ -116,7 +100,6 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  margin-bottom: 40px;
 }
 .mobileAddressTel:hover,
 .mobileAddressTel:focus {
@@ -141,8 +124,35 @@
   color: var(--ocean);
 }
 
-.moblieSocialLinks {
+.mobileSocialLinks {
   list-style: none;
   display: flex;
-  gap: 56px;
+  gap: 30px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: var(--iris);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socialLink:hover,
+.socialLink:focus,
+.socialLink:active {
+  background-color: var(--ocean);
+}
+
+.socialIcon {
+  width: 16px;
+  height: 16px;
+  fill: var(--cloud);
 }

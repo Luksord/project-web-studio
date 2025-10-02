@@ -1,158 +1,79 @@
-// import { Dispatch, SetStateAction } from 'react';
-// import InstagramIcon from '../../assets/images/icons.svg#icon-social-instagram.svg';
-// import TwitterIcon from '../../assets/images/icons.svg#icon-social-twitter.svg';
-// import FacebookIcon from '../../assets/images/icons.svg#icon-social-facebook.svg';
-// import LinkedinIcon from '../../assets/images/icons.svg#icon-social-linkedin.svg';
-// import CloseIcon from '../../assets/images/icons.svg#icon-close.svg';
-// import { SocialLinkProps } from '../HomeSection4/HomeSection4';
-// import css from './MobileMenu.module.css';
-
-// interface MobileMenuProps {
-//   setIsMobileMenuOpen: Dispatch<SetStateAction<boolean>>;
-// }
-
-// const socialLinks: SocialLinkProps[] = [
-//   { href: 'https://instagram.com', icon: InstagramIcon, alt: 'Instagram' },
-//   { href: 'https://twitter.com', icon: TwitterIcon, alt: 'Twitter' },
-//   { href: 'https://facebook.com', icon: FacebookIcon, alt: 'Facebook' },
-//   { href: 'https://linkedin.com', icon: LinkedinIcon, alt: 'LinkedIn' },
-// ];
-
-// const SocialLink: React.FC<SocialLinkProps> = ({ href, icon, alt }) => (
-//   <li className={css.linkContainer}>
-//     <a href={href} className={css.socialLink} aria-label={alt}>
-//       <svg className={css.socialIcon}>
-//         <use href={icon}></use>
-//       </svg>
-//     </a>
-//   </li>
-// );
-
-// export const MobileMenu = ({ setIsMobileMenuOpen }: MobileMenuProps) => {
-//   return (
-//     <div className={css.menuContainer}>
-//       <div>
-//         <button
-//           type='button'
-//           className={`${css.menuToggle} ${css.modalCloseBtn}`}
-//           onClick={() => setIsMobileMenuOpen(false)}
-//         >
-//           <svg className={css.closeIcon} width='8' height='8'>
-//             <use href={CloseIcon} />
-//           </svg>
-//         </button>
-//         <nav>
-//           <ul className={css.mobileMenu}>
-//             <li>
-//               <a href='/' className={css.navLink}>
-//                 Studio
-//               </a>
-//             </li>
-//             <li>
-//               <a href='/portfolio' className={css.navLink}>
-//                 Portfolio
-//               </a>
-//             </li>
-//             <li>
-//               <a href='/contacts' className={css.navLink}>
-//                 Contacts
-//               </a>
-//             </li>
-//           </ul>
-//         </nav>
-//         <address>
-//           <ul className='mobileAddressList'>
-//             <li>
-//               <a href='tel:+110001111111' className='link'>
-//                 +11 (000) 111-11-11
-//               </a>
-//             </li>
-//             <li>
-//               <a href='mailto:info@devstudio.com' className='link'>
-//                 info@devstudio.com
-//               </a>
-//             </li>
-//           </ul>
-//         </address>
-//         <div>
-//           <ul className={css.moblieSocialLinks}>
-//             {socialLinks.map((link, index) => (
-//               <SocialLink key={index} {...link} />
-//             ))}
-//           </ul>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
 import { Dispatch, SetStateAction } from 'react';
 import { Link } from 'react-router-dom';
-// import InstagramIcon from '../../assets/images/icons.svg#icon-social-instagram.svg';
-// import TwitterIcon from '../../assets/images/icons.svg#icon-social-twitter.svg';
-// import FacebookIcon from '../../assets/images/icons.svg#icon-social-facebook.svg';
-// import LinkedinIcon from '../../assets/images/icons.svg#icon-social-linkedin.svg';
-// import CloseIcon from '../../assets/images/icons.svg#icon-close.svg';
-// import { SocialLinkProps } from '../HomeSection4/HomeSection4';
-import css from '../Header/Header.module.css';
+import InstagramIcon from '../../assets/icons/icon-social-instagram.svg?react';
+import TwitterIcon from '../../assets/icons/icon-social-twitter.svg?react';
+import FacebookIcon from '../../assets/icons/icon-social-facebook.svg?react';
+import LinkedinIcon from '../../assets/icons/icon-social-linkedin.svg?react';
+import CloseIcon from '../../assets/icons/icon-close.svg?react';
+import { SocialLinkProps } from '../HomeSection4/HomeSection4';
 import { menu } from '../Menu/Menu';
+import css from './MobileMenu.module.css';
 
 interface MobileMenuProps {
   setIsMobileMenuOpen: Dispatch<SetStateAction<boolean>>;
 }
 
+const socialLinks: SocialLinkProps[] = [
+  { href: 'https://instagram.com/webstudio', icon: InstagramIcon, alt: 'Instagram' },
+  { href: 'https://twitter.com/webstudio', icon: TwitterIcon, alt: 'Twitter' },
+  { href: 'https://facebook.com/webstudio', icon: FacebookIcon, alt: 'Facebook' },
+  { href: 'https://linkedin.com/in/webstudio', icon: LinkedinIcon, alt: 'LinkedIn' },
+];
+
+const SocialLink = ({ href, icon: Icon, alt }: SocialLinkProps) => (
+  <li className={css.linkContainer}>
+    <a href={href} className={css.socialLink} aria-label={alt}>
+      <Icon className={css.socialIcon} />
+    </a>
+  </li>
+);
+
 export const MobileMenu = ({ setIsMobileMenuOpen }: MobileMenuProps) => {
   return (
-    <div className='menu-container'>
+    <div className={`${css.menuContainer} ${css['isOpen']}`}>
       <div>
-        <button type='button' className='menu-toggle modal-close-button' onClick={() => setIsMobileMenuOpen(false)}>
-          <svg className='close-icon' width='8' height='8'>
-            <use href='/images/icons.svg#icon-close' />
-          </svg>
+        <button
+          type='button'
+          className={`${css.menuToggle} ${css.modalCloseBtn}`}
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <CloseIcon className={css.closeIcon} />
         </button>
         <nav>
-          {menu.map(({ pageName, pageLink }, index) => (
-            <li key={index} className={css.navItem}>
-              <Link
-                to={pageLink}
-                className={`${css.navLink} ${location.pathname.startsWith(pageLink) ? css.underline : ''}`}
-              >
-                {pageName}
-              </Link>
-            </li>
-          ))}
-          <ul className='mobile-menu'>
-            <li>
-              <a href='/' className='link'>
-                Studio
-              </a>
-            </li>
-            <li>
-              <a href='/portfolio' className='link'>
-                Portfolio
-              </a>
-            </li>
-            <li>
-              <a href='/contacts' className='link'>
-                Contacts
-              </a>
-            </li>
+          <ul className={css.navList}>
+            {menu.map(({ pageName, pageLink }, index) => (
+              <li key={index} className={css.navItem}>
+                <Link
+                  to={pageLink}
+                  className={`${css.navLink} ${location.pathname.startsWith(pageLink) ? css.underline : ''}`}
+                >
+                  {pageName}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
         <address>
-          <ul className='mobile-address'>
+          <ul className={css.mobileAddressList}>
             <li>
-              <a href='tel:+110001111111' className='link'>
+              <a href='tel:+110001111111' className={css.mobileAddressTel}>
                 +11 (000) 111-11-11
               </a>
             </li>
             <li>
-              <a href='mailto:info@devstudio.com' className='link'>
+              <a href='mailto:info@devstudio.com' className={css.mobileAddressMail}>
                 info@devstudio.com
               </a>
             </li>
           </ul>
         </address>
+        <div>
+          <ul className={css.mobileSocialLinks}>
+            {socialLinks.map((link, index) => (
+              <SocialLink key={index} {...link} />
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

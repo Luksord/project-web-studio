@@ -7,14 +7,14 @@ import img6 from '../../assets/images/img6.jpg';
 import img6x2 from '../../assets/images/img6@2x.jpg';
 import img7 from '../../assets/images/img7.jpg';
 import img7x2 from '../../assets/images/img7@2x.jpg';
-import InstagramIcon from '../../assets/images/icons.svg#icon-social-instagram.svg';
-import TwitterIcon from '../../assets/images/icons.svg#icon-social-twitter.svg';
-import FacebookIcon from '../../assets/images/icons.svg#icon-social-facebook.svg';
-import LinkedinIcon from '../../assets/images/icons.svg#icon-social-linkedin.svg';
+import InstagramIcon from '../../assets/icons/icon-social-instagram.svg?react';
+import TwitterIcon from '../../assets/icons/icon-social-twitter.svg?react';
+import FacebookIcon from '../../assets/icons/icon-social-facebook.svg?react';
+import LinkedinIcon from '../../assets/icons/icon-social-linkedin.svg?react';
 
 export interface SocialLinkProps {
   href: string;
-  icon: string;
+  icon: React.FC<React.SVGProps<SVGSVGElement>>;
   alt: string;
 }
 
@@ -82,12 +82,10 @@ const teamMembers: teamMemberProps[] = [
   },
 ];
 
-const SocialLink = ({ href, icon, alt }: SocialLinkProps) => (
+const SocialLink = ({ href, icon: Icon, alt }: SocialLinkProps) => (
   <li className={css.linkContainer}>
     <a href={href} className={css.socialLink} aria-label={alt}>
-      <svg className={css.socialIcon}>
-        <use href={icon}></use>
-      </svg>
+      <Icon className={css.socialIcon} />
     </a>
   </li>
 );
