@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { HashRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import App from 'App';
@@ -16,7 +16,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <HashRouter>
         <HelmetProvider>
           <ThemeProvider>
-            <App />
+            <BrowserRouter basename='/project-web-studio'>
+              <App />
+            </BrowserRouter>
           </ThemeProvider>
         </HelmetProvider>
       </HashRouter>
