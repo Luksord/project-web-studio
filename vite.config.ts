@@ -5,5 +5,13 @@ import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
   base: '/project-web-studio/',
-  plugins: [react(), tsconfigPaths(), svgr()],
+  plugins: [
+    react(),
+    tsconfigPaths(),
+    svgr({
+      svgrOptions: {
+        icon: true,
+      },
+    }),
+  ],
 });
